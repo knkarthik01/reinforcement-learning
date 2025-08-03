@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RL Chapter 1 Flow Diagram</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .title {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 40px;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        
+        .flow-diagram {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: center;
+        }
+        
+        .section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 25px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+            min-width: 300px;
+        }
+        
+        .section:hover {
+            transform: translateY(-3px);
+        }
+        
+        .section h3 {
+            margin: 0 0 8px 0;
+            font-size: 18px;
+        }
+        
+        .section p {
+            margin: 0;
+            font-size: 14px;
+            opacity: 0.9;
+        }
+        
+        .arrow {
+            font-size: 24px;
+            color: #3498db;
+            margin: 10px 0;
+        }
+        
+        .examples-row {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+        
+        .example {
+            background: linear-gradient(135deg, #56ab2f 0%, #a8e6cf 100%);
+            color: #2c3e50;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-size: 14px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            min-width: 120px;
+            text-align: center;
+        }
+        
+        .elements-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+            width: 100%;
+        }
+        
+        .element {
+            background: linear-gradient(135deg, #ff7b7b 0%, #ff9a56 100%);
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+        }
+        
+        .element h4 {
+            margin: 0 0 8px 0;
+            font-size: 16px;
+        }
+        
+        .element p {
+            margin: 0;
+            font-size: 12px;
+            opacity: 0.9;
+        }
+        
+        .extended-example {
+            background: linear-gradient(135deg, #4ecdc4 0%, #44a08d 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            margin: 20px 0;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        
+        .summary-history {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .final-section {
+            background: linear-gradient(135deg, #8360c3 0%, #2ebf91 100%);
+            color: white;
+            padding: 15px 25px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            min-width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Chapter 1: Introduction to Reinforcement Learning<br>Flow Diagram</h1>
+        
+        <div class="flow-diagram">
+            <!-- Section 1.1 -->
+            <div class="section">
+                <h3>1.1 What is Reinforcement Learning?</h3>
+                <p>Learning through interaction with environment to achieve goals</p>
+            </div>
+            
+            <div class="arrow">↓</div>
+            
+            <!-- Section 1.2 -->
+            <div class="section">
+                <h3>1.2 Examples</h3>
+                <p>Real-world applications and scenarios</p>
+            </div>
+            
+            <div class="examples-row">
+                <div class="example">Game Playing<br>(Chess, Go)</div>
+                <div class="example">Robot Control<br>(Navigation)</div>
+                <div class="example">Resource<br>Allocation</div>
+                <div class="example">Autonomous<br>Vehicles</div>
+            </div>
+            
+            <div class="arrow">↓</div>
+            
+            <!-- Section 1.3 -->
+            <div class="section">
+                <h3>1.3 Elements of Reinforcement Learning</h3>
+                <p>Core components that define the RL framework</p>
+            </div>
+            
+            <div class="elements-grid">
+                <div class="element">
+                    <h4>Agent</h4>
+                    <p>The learner/decision maker</p>
+                </div>
+                <div class="element">
+                    <h4>Environment</h4>
+                    <p>Everything outside the agent</p>
+                </div>
+                <div class="element">
+                    <h4>Actions</h4>
+                    <p>Choices available to agent</p>
+                </div>
+                <div class="element">
+                    <h4>States</h4>
+                    <p>Current situation/configuration</p>
+                </div>
+                <div class="element">
+                    <h4>Rewards</h4>
+                    <p>Immediate feedback signal</p>
+                </div>
+                <div class="element">
+                    <h4>Policy</h4>
+                    <p>Agent's behavior strategy</p>
+                </div>
+                <div class="element">
+                    <h4>Value Function</h4>
+                    <p>Expected long-term reward</p>
+                </div>
+                <div class="element">
+                    <h4>Model (Optional)</h4>
+                    <p>Agent's representation of environment</p>
+                </div>
+            </div>
+            
+            <div class="arrow">↓</div>
+            
+            <!-- Section 1.4 -->
+            <div class="section">
+                <h3>1.4 Limitations and Scope</h3>
+                <p>What RL can and cannot do, assumptions and boundaries</p>
+            </div>
+            
+            <div class="arrow">↓</div>
+            
+            <!-- Section 1.5 -->
+            <div class="extended-example">
+                <h3>1.5 Extended Example: Tic-Tac-Toe</h3>
+                <p><strong>Concrete Implementation:</strong></p>
+                <p>• States: Board configurations<br>
+                • Actions: Move placement<br>
+                • Rewards: Win (+1), Lose (-1), Draw (0)<br>
+                • Learning: Value function estimation through self-play</p>
+            </div>
+            
+            <div class="arrow">↓</div>
+            
+            <!-- Sections 1.6 & 1.7 -->
+            <div class="summary-history">
+                <div class="final-section">
+                    <h3>1.6 Summary</h3>
+                    <p>Key takeaways and<br>chapter conclusions</p>
+                </div>
+                <div class="final-section">
+                    <h3>1.7 History</h3>
+                    <p>Origins and evolution<br>of RL field</p>
+                </div>
+            </div>
+        </div>
+        
+        <div style="margin-top: 40px; padding: 20px; background-color: #f8f9fa; border-radius: 10px; border-left: 4px solid #3498db;">
+            <h4 style="color: #2c3e50; margin-top: 0;">Flow Logic:</h4>
+            <p style="color: #5a6c7d; margin-bottom: 0;">
+                The chapter follows a logical progression: <strong>Definition → Examples → Framework → Limitations → Application → Synthesis</strong>. 
+                Each section builds understanding systematically, culminating in a practical example that demonstrates all concepts working together.
+            </p>
+        </div>
+    </div>
+</body>
+</html>
